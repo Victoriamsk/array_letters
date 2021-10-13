@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    let str = 'Если ты будешь злиться на меня каждый раз, когда я делаю глупость, мне придется прекратить делать глупости';
+
+    function firstChar(value, index, arr) {
+        if (index == 0)
+            return true;
+        else
+            return arr[index - 1] === " ";
+    }
+    let array = [].filter.call(str.toLowerCase(), firstChar);
+    let newArray = [...new Set(array.sort())];
+    
+    console.log(newArray);
+</script>
+
+</html>
